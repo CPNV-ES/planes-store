@@ -73,3 +73,33 @@ describe("When authentication authorize connection", () => {
 		expect(auth.checkUserLoginStatus()).toBe("not connected");
 	});
 });
+
+describe("When authentication do not authorize connection", () => {
+	beforeEach(() => {
+		Authentication.mockImplementation(() => {
+			let status = "";
+			return {
+				login: jest.fn(() => {
+					status = "not connected";
+					throw new Error("UnauthorizedError");
+				}),
+				checkUserLoginStatus: jest.fn(() => {
+					return status;
+				}),
+			};
+		});
+	});
+	it("should not log in the user", () => {
+		// Given
+		// User is not logged in
+		const auth = new Authentication();
+
+		// When
+		// User has clicked on the login button and has entered the wrong credentials
+
+		// Then
+		// User is not logged in
+		expect(auth.login).toThrowError("UnauthorizedError");
+		expect(auth.checkUserLoginStatus()).toBe("not connected");
+	});
+});
