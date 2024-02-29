@@ -1,8 +1,8 @@
-const Authentication = require("./Authentication");
-const FBConnector = require("./FBConnector");
+const Authentication = require("../Authentication");
+const FBConnector = require("../FBConnector");
 
-jest.mock("./Authentication");
-jest.mock("./FBConnector");
+jest.mock("../Authentication");
+jest.mock("../FBConnector");
 
 FBConnector.mockImplementation(() => {
 	return {
