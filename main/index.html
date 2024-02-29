@@ -11,21 +11,24 @@
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
     
     <!-- First Navigation -->
-    <nav class="navbar nav-first navbar-dark bg-dark">
+    <nav class="navbar nav-first navbar-light navbar-expand-sm bg-light">
         <div class="container">
             <a class="navbar-brand" href="#">
                 <img src="img/navbar-brand.svg" alt="" style="height: 70px; width: auto">
             </a>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link text-primary" href="#home">CALL US : <span class="pl-2 text-muted">(123) 456 7890</span></a>
-                </li>                   
+                    <a class="nav-link text-primary" href="#home">Nous contacter <span class="pl-2 text-muted">+41 24 230 43 20</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-primary" href="#"><span class="pl-2 text-muted">All prices are HT</span></a>
+                </li>
             </ul>
         </div>
     </nav>
     <!-- End of First Navigation --> 
     <!-- Second Navigation -->
-    <nav class="nav-second navbar custom-navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+    <nav class="nav-second navbar custom-navbar navbar-expand-sm navbar-dark bg-primary sticky-top">
         <div class="container">
             <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -33,21 +36,15 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto"> 
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">About Us</a>
+                        <a class="nav-link" href="#service">Nos aéronefs</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#service">Our Service</a>
+                        <a class="nav-link" href="#contact">Demander des informations</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#team">Our Team</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#testmonial">Testmonials</a>
-                    </li>
-                </ul> 
+                </ul>
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a href="components.html" class="btn btn-primary btn-sm">Components</a>
+                        <a href="my-swiss-aircraft.html" class="btn btn-primary btn-sm">mySWISS AirCraft</a>
                     </li>
                 </ul>
             </div>
@@ -56,16 +53,16 @@
     <!-- End Of Second Navigation --> 
     <!-- Page Header -->
     <header class="header">
-        <div class="overlay">
-            <h1 class="subtitle">Welcome To Our Restaurant</h1>
-            <h1 class="title">Really Fresh &amp; Tasty</h1> 
-            <a class="btn btn-primary mt-3" href="#book-table">Book A Table</a> 
-        </div>      
+        <div class="h-container">
             <img src="img/logo.svg" alt="" class="logo">
+            <h1 class="subtitle">Le futur de l'aviation privée est déjà là</h1>
+            <h1 class="title">SWISS AirCraft</h1>
+            <a class="btn btn-primary mt-3" href="#service">Accéder au catalogue</a>
+        </div>
     </header>
     <!-- End Of Page Header --> 
     <!-- About Section -->
-    <section id="about">
+    <!--<section id="about">
         <div class="container">
             <div class="row align-items-center">                
                 <div class="col-md-6">
@@ -107,14 +104,14 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>-->
     <!-- End OF About Section -->
 
     <!-- Service Section -->
     <section id="service" class="pattern-style-4 has-overlay">
         <div class="container raise-2">
-            <h6 class="section-subtitle text-center">Featured Food</h6>
-            <h3 class="section-title mb-6 pb-3 text-center">Special Dishes</h3>
+            <h6 class="section-subtitle text-center">Avions à la une</h6>
+            <h3 class="section-title mb-6 pb-3 text-center">Nos avions</h3>
             <div class="row">
                 <div class="col-md-6 mb-4">
                     <a href="javascrip:void(0)" class="custom-list">
@@ -123,11 +120,11 @@
                         </div>
                         <div class="info">
                             <div class="head clearfix">
-                                <h5 class="title float-left">Aperiam incidunt dicta</h5>
-                                <p class="float-right text-primary">$25</p>
+                                <h5 class="title float-left">Pilatus PC-24</h5>
+                                <p class="float-right text-primary">Dès 25'000'000 CHF</p>
                             </div>
                             <div class="body">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing Eos, earum dicta est veniam beatae libero!</p>
+                                <p>The Super Versatile Jet</p>
                             </div>
                         </div>
                     </a>
@@ -218,7 +215,7 @@
     <!-- End of Featured Food Section -->
 
     <!-- Menu Section -->
-    <section class="has-img-bg">
+    <!--<section class="has-img-bg">
         <div class="container">
             <h6 class="section-subtitle text-center">Great Food</h6>
             <h3 class="section-title mb-6 text-center">Main Menu</h3>
@@ -296,18 +293,18 @@
                 </div>
             </div>                  
         </div>
-    </section>
+    </section>-->
     <!-- End of Menu Section -->
 
     <!-- Team Section -->
-    <section id="team">
+    <!--<section id="team">
         <div class="container">
             <h6 class="section-subtitle text-center">Great Team</h6>
             <h3 class="section-title mb-5 text-center">Talented Chefs</h3>
             <div class="row">
                 <div class="col-md-4 my-3">
                     <div class="team-wrapper text-center">
-                        <img src="assets/imgs/chef-1.jpg" class="circle-120 rounded-circle mb-3 shadow" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, Pigga Landing page">
+                        <img src="assets/imgs/chef-1.jpg" class="circle-120 rounded-circle mb-3 shadow" alt="">
                         <h5 class="my-3">Brian Scott</h5>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente suscipit, odio nulla reiciendis!</p>
                         <h6 class="socials mt-3">
@@ -346,11 +343,11 @@
                 </div> 
             </div>
         </div>
-    </section>
+    </section>-->
     <!-- End of Team Section -->
 
     <!-- Testmonial Section -->
-    <section id="testmonial" class="pattern-style-3">
+    <!--<section id="testmonial" class="pattern-style-3">
         <div class="container">
             <h6 class="section-subtitle text-center">Best Clients</h6>
             <h3 class="section-title mb-5 text-center">Testmonials</h3>
@@ -400,12 +397,12 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>-->
     <!-- End of Testmonial Section -->
 
 
     <!-- Book Table Section -->
-    <section id="book-table" class="bg-white">
+    <section id="contact" class="bg-white">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6 d-none d-md-block">
@@ -445,7 +442,6 @@
                     <a href="#" class="px-3"><small class="font-weight-bold">Our Company</small></a>
                     <a href="#" class="px-3"><small class="font-weight-bold">Our Location</small></a>
                     <a href="#" class="px-3"><small class="font-weight-bold">Help Center</small></a>
-                    <a href="components.html" class="pl-3"><small class="font-weight-bold">Components</small></a>
                 </div>
             </div>
         </div>
@@ -457,7 +453,7 @@
         <div class="container">
             <div class="row align-items-center text-center text-md-left">
                 <div class="col">
-                    <p class="mb-0 small">&copy; <script>document.write(new Date().getFullYear())</script>, <a href="https://www.devcrud.com" target="_blank">DevCrud</a>  All rights reserved </p> 
+                    <p class="mb-0 small">&copy; <script>document.write(new Date().getFullYear())</script>, <a href="https://swiss.ch" target="_blank">SWISS</a>  All rights reserved </p>
                 </div>
                 <div class="d-none d-md-block">
                     <h6 class="small mb-0">
