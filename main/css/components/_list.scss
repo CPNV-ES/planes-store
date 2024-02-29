@@ -1,9 +1,9 @@
 .custom-list {
 	@include flex;
+	flex-direction: column;
 	color: inherit;
 
 	.img-holder {
-		width: 70px;
 		min-width: 70px;
 		margin-right: 10px;
 
