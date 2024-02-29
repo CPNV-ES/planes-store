@@ -27,3 +27,49 @@ describe("When Authentication throws an error", () => {
 		expect(auth.checkUserLoginStatus).toThrowError("UserNotConnectedError");
 	});
 });
+
+describe("When authentication authorize connection", () => {
+	beforeEach(() => {
+		Authentication.mockImplementation(() => {
+			let status = "";
+			return {
+				login: jest.fn(() => {
+					status = "connected";
+				}),
+				logout: jest.fn(() => {
+					status = "not connected";
+				}),
+				checkUserLoginStatus: jest.fn(() => {
+					return status;
+				}),
+			};
+		});
+	});
+	it("should log in the user", () => {
+		// Given
+		// User is not logged in
+		const auth = new Authentication();
+
+		// When
+		// User clicks has clicked on the login button and has entered the correct credentials
+		auth.login();
+
+		// Then
+		// User is logged in
+		expect(auth.checkUserLoginStatus()).toBe("connected");
+	});
+	it("should log out the user", () => {
+		// Given
+		// User is logged in
+		const auth = new Authentication();
+		auth.login();
+
+		// When
+		// User clicks on the logout button
+		auth.logout();
+
+		// Then
+		// User is logged out
+		expect(auth.checkUserLoginStatus()).toBe("not connected");
+	});
+});
