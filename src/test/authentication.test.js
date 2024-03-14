@@ -1,72 +1,13 @@
 const Authentication = require("../Authentication");
-const FBConnector = require("../FBConnector");
-
-jest.mock("../Authentication");
-jest.mock("../FBConnector");
-
-FBConnector.mockImplementation(() => {
-	return {
-		login: () => ({
-			status: "connected",
-			authResponse: {
-				accessToken: "{access-token}",
-				expiresIn: "{unix-timestamp}",
-				reauthorize_required_in: "{seconds-until-token-expires}",
-				signedRequest: "{signed-parameter}",
-				userID: "{user-id}",
-			},
-		}),
-		logout: () => ({
-			status: "unknown",
-			authResponse: {
-				accessToken: "{access-token}",
-				expiresIn: "{unix-timestamp}",
-				reauthorize_required_in: "{seconds-until-token-expires}",
-				signedRequest: "{signed-parameter}",
-				userID: "{user-id}",
-			},
-		}),
-		checkUserLoginStatus: () => ({
-			status: "connected",
-			authResponse: {
-				accessToken: "{access-token}",
-				expiresIn: "{unix-timestamp}",
-				reauthorize_required_in: "{seconds-until-token-expires}",
-				signedRequest: "{signed-parameter}",
-				userID: "{user-id}",
-			},
-		}),
-	};
-});
 
 describe("When Authentication is used with facebook connector", () => {
-	Authentication.mockImplementation(() => {
-		const FB = new FBConnector();
-		res = undefined;
-		return {
-			login: () => {
-				this.res = FB.login();
-				if (this.res.status !== "connected") {
-					this.res = undefined;
-					throw new Error("UnauthorizedError");
-				}
-				return this.res.status;
-			},
-			logout: () => {
-				this.res = FB.logout();
-			},
-			isUserLoggedIn: () => {
-				if (this.res?.status == "unknown") {
-					return false;
-				}
-				this.res = FB.checkUserLoginStatus();
-				if (this.res?.status == "connected") {
-					return true;
-				}
-			},
-		};
-	});
-	auth = new Authentication();
+	describe("When testing model formatted response", () => {
+		auth = new Authentication();
+		describe("When authentication authorize connection", () => {
+			it("should log in the user", () => {
+				// Given
+				// User is not logged in
+				const auth = new Authentication();
 	describe("When authentication authorize connection", () => {
 		it("should log in the user", () => {
 			// Given
