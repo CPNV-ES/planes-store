@@ -1,0 +1,18 @@
+$primary: #e60005;
+
+$primary: $primary;
+
+$theme-colors: ();
+
+$theme-colors: map-merge(
+	(
+		"primary": $primary,
+	),
+	$theme-colors
+);
+
+$navbar-dark-active-color: $primary;
+
+$navbar-light-active-color: rgba($primary, 0.9);
+
+$pagination-active-bg: $primary;
