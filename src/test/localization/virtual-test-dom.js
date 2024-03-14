@@ -1,47 +1,41 @@
-const {strToDom} = require('../../helpers')
+const strToDom = require('../../helpers')
 
 module.exports = class {
 
     constructor(title = 'Mon super titre', label = 'Nom de famille', placeholder = 'Nom', value = 'Rutz') {
-        this.vDOM = new Document()
-        this.vDOM.append(strToDom(`<html lang="fr">
-    <head>
-        <title data-lang-text="head.title">${title}</title>
-    </head>
-    <body>
-        <h1 data-lang-text="title">${title}</h1>
+        document.body.innerHTML = `<h1 data-lang-text="title">${title}</h1>
         <label data-lang-text="input.label">${label}</label>
-        <input data-lang-attr="placeholder:input.placeholder" placeholder="${placeholder}" value="${value}"/>
-    </body>
-</html>`))
+        <input data-lang-attr="placeholder:input.placeholder" placeholder="${placeholder}" value="${value}"/>`
+        document.querySelector('head').append(strToDom(`<title data-lang-text="head.title">${title}</title>`))
+        document.querySelector('html').setAttribute('lang', 'fr')
     }
 
     getInputValue() {
-        return this.vDOM.querySelector('input').value
+        return document.querySelector('input').value
     }
 
     getInputPlaceholder() {
-        return this.vDOM.querySelector('input').getAttribute('placeholder')
+        return this.querySelector('input').getAttribute('placeholder')
     }
 
     getLabelContent() {
-        return this.vDOM.querySelector('label')
+        return this.querySelector('label')
     }
 
     getH1Content() {
-        return this.vDOM.querySelector('h1')
+        return this.querySelector('h1')
     }
 
     getTitleContent() {
-        return this.vDOM.querySelector('title')
+        return this.querySelector('title')
     }
 
     querySelector(selector) {
-        return this.vDOM.querySelector(selector)
+        return document.querySelector(selector)
     }
 
     querySelectorAll(selector) {
-        return this.vDOM.querySelectorAll(selector)
+        return document.querySelectorAll(selector)
     }
 
 }
