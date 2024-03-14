@@ -12,23 +12,30 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-import './index.scss'
+import "./index.scss";
+
+import jQuery from "jquery";
+import bootstrap from "bootstrap";
+
+Object.assign(window, { $: jQuery, jQuery });
 
 // smooth scroll
-$(document).ready(function(){
-    $(".navbar .nav-link").on('click', function(event) {
+$(document).ready(function () {
+	$(".navbar .nav-link").on("click", function (event) {
+		if (this.hash !== "") {
+			event.preventDefault();
 
-        if (this.hash !== "") {
+			var hash = this.hash;
 
-            event.preventDefault();
-
-            var hash = this.hash;
-
-            $('html, body').animate({
-                scrollTop: $(hash).offset().top
-            }, 700, function(){
-                window.location.hash = hash;
-            });
-        }
-    });
+			$("html, body").animate(
+				{
+					scrollTop: $(hash).offset().top,
+				},
+				700,
+				function () {
+					window.location.hash = hash;
+				}
+			);
+		}
+	});
 });
