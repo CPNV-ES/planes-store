@@ -1,5 +1,4 @@
-import './login.scss'
-import $ from 'jquery';
+import '../login.scss'
 
 $(function() {
     'use strict';
