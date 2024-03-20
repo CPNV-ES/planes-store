@@ -68,16 +68,17 @@ How to deploy the application outside the dev environment.
 ## Directory structure
 
 ```shell
-├───login
-│   └───img
-├───main
-│   ├───css
-│   │   ├───abstracts
-│   │   ├───base
-│   │   ├───components
-│   │   └───layout
-│   └───img
 └───src
+    ├───css
+    │   ├───abstracts
+    │   ├───base
+    │   ├───components
+    │   ├───custom
+    │   └───layout
+    ├───home
+    ├───img
+    ├───login
+    ├───public
     └───test
         └───localization
 ```
