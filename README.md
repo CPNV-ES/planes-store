@@ -63,6 +63,10 @@ How to deploy the application outside the dev environment.
 
 ![Architecture](./doc/schemas/architecture_v0.1.png)
 
+### Request workflow
+
+![Request workflow](./doc/schemas/workflow_v0.1.png)
+
 ## Collaborate
 
 * Take time to read some readme and find the way you would like to help other developers collaborate with you.
