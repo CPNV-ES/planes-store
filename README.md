@@ -57,6 +57,12 @@ How to deploy the application outside the dev environment.
         └───Debug
 ```
 
+## Documentation
+
+### Architecture
+
+![Architecture](./doc/schemas/architecture_v0.1.png)
+
 ## Collaborate
 
 * Take time to read some readme and find the way you would like to help other developers collaborate with you.
