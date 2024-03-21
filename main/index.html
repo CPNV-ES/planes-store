@@ -7,77 +7,77 @@
     <title>Craft by swissair</title>
     <script src="./index.js" type="module" defer></script>
 </head>
-<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
-    
-    <!-- First Navigation -->
-    <nav class="navbar nav-first navbar-light navbar-expand-sm bg-light">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="img/navbar-brand.svg" alt="" style="height: 70px; width: auto">
-            </a>
-            <ul class="navbar-nav ml-auto">
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home" x-data>
+
+<!-- First Navigation -->
+<nav class="navbar nav-first navbar-light navbar-expand-sm bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <img src="../img/navbar-brand.svg" alt="" style="height: 70px; width: auto">
+        </a>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link text-primary" href="#home"><span x-text="$t('nav.contact')">Nous contacter</span> <span class="pl-2 text-muted">+41 24 230 43 20</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-primary" href="#"><span class="pl-2 text-muted" x-text="$t('nav.vat')">All prices are HT</span></a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!-- End of First Navigation -->
+<!-- Second Navigation -->
+<nav class="nav-second navbar custom-navbar navbar-expand-sm navbar-dark bg-primary sticky-top">
+    <div class="container">
+        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link text-primary" href="#home">Nous contacter <span class="pl-2 text-muted">+41 24 230 43 20</span></a>
+                    <a class="nav-link" href="#service" x-text="$t('nav.menu.product_index')">Nos aéronefs</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-primary" href="#"><span class="pl-2 text-muted">All prices are HT</span></a>
+                    <a class="nav-link" href="#contact" x-text="$t('nav.menu.ask')">Demander des informations</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li>
+                    <select id="language-selector" @change="AlpineI18n.locale = $el.value">
+                        <option value="en">English</option>
+                        <option value="fr" selected>Français</option>
+                        <option value="de">Deutsch</option>
+                        <option value="it">Italiano</option>
+                    </select>
+                </li>
+                <li class="nav-item">
+                    <a href="my-swiss-aircraft.html" class="btn btn-primary btn-sm">mySWISSAIR Craft</a>
                 </li>
             </ul>
         </div>
-    </nav>
-    <!-- End of First Navigation --> 
-    <!-- Second Navigation -->
-    <nav class="nav-second navbar custom-navbar navbar-expand-sm navbar-dark bg-primary sticky-top">
-        <div class="container">
-            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto"> 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#service">Nos aéronefs</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Demander des informations</a>
-                    </li>
-                </ul>
-                <ul class="navbar-nav ml-auto">
-                    <li>
-                        <select id="language-selector">
-                            <option value="en">English</option>
-                            <option value="fr" selected>Français</option>
-                            <option value="de">Deutsch</option>
-                            <option value="it">Italiano</option>
-                        </select>
-                    </li>
-                    <li class="nav-item">
-                        <a href="my-swiss-aircraft.html" class="btn btn-primary btn-sm">mySWISSAIR Craft</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <!-- End Of Second Navigation --> 
-    <!-- Page Header -->
-    <header class="header">
-        <div class="h-container">
-            <img src="/img/logo.svg" alt="" class="logo">
-            <h1 class="subtitle">Le futur de l'aviation privée est déjà là</h1>
-            <h1 class="title">SWISS AirCraft</h1>
-            <a class="btn btn-primary mt-3" href="#service">Accéder au catalogue</a>
-        </div>
-    </header>
-    <!-- End Of Page Header --> 
-    <!-- About Section -->
-    <!--<section id="about">
-        <div class="container">
-            <div class="row align-items-center">                
-                <div class="col-md-6">
-                    <h6 class="section-subtitle">Opening Times</h6>
-                    <h3 class="section-title">Working Times</h3>
-                    <p class="mb-1 font-weight-bold">Monday - Thursday : <span class="font-weight-normal pl-2 text-muted">7:00 am - 12:00 pm</span></p>
-                    <p class="mb-1 font-weight-bold">Friday - Saturday : <span class="font-weight-normal pl-2 text-muted">7:00 am - Midnight</span></p>
-                    <p class="mb-1 font-weight-bold">Saturday - Sunday : <span class="font-weight-normal pl-2 text-muted">9:00 am - 12:00 pm</span></p>
+    </div>
+</nav>
+<!-- End Of Second Navigation -->
+<!-- Page Header -->
+<header class="header">
+    <div class="h-container">
+        <img src="/src/img/logo.svg" alt="" class="logo">
+        <h1 class="subtitle">Le futur de l'aviation privée est déjà là</h1>
+        <h1 class="title">SWISS AirCraft</h1>
+        <a class="btn btn-primary mt-3" href="#service">Accéder au catalogue</a>
+    </div>
+</header>
+<!-- End Of Page Header -->
+<!-- About Section -->
+<!--<section id="about">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h6 class="section-subtitle">Opening Times</h6>
+                <h3 class="section-title">Working Times</h3>
+                <p class="mb-1 font-weight-bold">Monday - Thursday : <span class="font-weight-normal pl-2 text-muted">7:00 am - 12:00 pm</span></p>
+                <p class="mb-1 font-weight-bold">Friday - Saturday : <span class="font-weight-normal pl-2 text-muted">7:00 am - Midnight</span></p>
+                <p class="mb-1 font-weight-bold">Saturday - Sunday : <span class="font-weight-normal pl-2 text-muted">9:00 am - 12:00 pm</span></p>
 
                     <a href="#book-table" class="btn btn-primary btn-sm w-md mt-4">Book a table</a>
                 </div>
@@ -114,32 +114,32 @@
     </section>-->
     <!-- End OF About Section -->
 
-    <!-- Service Section -->
-    <section id="service" class="pattern-style-4 has-overlay">
-        <div class="container raise-2">
-            <h6 class="section-subtitle text-center">Avions à la une</h6>
-            <h3 class="section-title mb-6 pb-3 text-center">Nos avions</h3>
-            <div class="row">
-                <div class="col-md-6 mb-4" data-template="card.plane">
-                    <a href="javascrip:void(0)" class="custom-list">
-                        <div class="img-holder">
-                            <img src="img/pc-24-bp.svg" alt="">
+<!-- Service Section -->
+<section id="service" class="pattern-style-4 has-overlay">
+    <div class="container raise-2">
+        <h6 class="section-subtitle text-center">Avions à la une</h6>
+        <h3 class="section-title mb-6 pb-3 text-center">Nos avions</h3>
+        <div class="row">
+            <div class="col-md-6 mb-4" data-template="card.plane">
+                <a href="javascrip:void(0)" class="custom-list">
+                    <div class="img-holder">
+                        <img src="src/img/pc-24-bp.svg" alt="">
+                    </div>
+                    <div class="info">
+                        <div class="head clearfix">
+                            <h5 class="title float-left">Pilatus PC-24</h5>
+                            <p class="float-right text-primary">Dès 25'000'000 CHF</p>
                         </div>
-                        <div class="info">
-                            <div class="head clearfix">
-                                <h5 class="title float-left">Pilatus PC-24</h5>
-                                <p class="float-right text-primary">Dès 25'000'000 CHF</p>
-                            </div>
-                            <div class="body">
-                                <p>The Super Versatile Jet</p>
-                            </div>
+                        <div class="body">
+                            <p>The Super Versatile Jet</p>
                         </div>
-                    </a>
-                </div>
-            </div>                  
+                    </div>
+                </a>
+            </div>
         </div>
-    </section>
-    <!-- End of Featured Food Section -->
+    </div>
+</section>
+<!-- End of Featured Food Section -->
 
     <!-- Menu Section -->
     <!--<section class="has-img-bg">
@@ -328,69 +328,68 @@
     <!-- End of Testmonial Section -->
 
 
-    <!-- Book Table Section -->
-    <section id="contact" class="bg-white">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6 d-none d-md-block">
-                    <img src="assets/imgs/contact.jpg" alt="" class="w-100 rounded shadow">
-                </div>
-                <div class="col-md-6">
-                    <form>
-                        <div class="form-group">
-                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" aria-label="Full name" placeholder="Your Name">
-                        </div>
-                        <div class="form-group">
-                            <input type="tel" class="form-control" name="phone" placeholder="Your Phone" aria-label="Phone number">
-                        </div>
-                        <div class="form-group">
-                            <textarea name="message" class="form-control" id="" cols="30" rows="10" aria-label="Message" placeholder="Describe your demands there"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-block">Confirm</button>
-                        <small class="form-text text-muted mt-3">We don't span customers. Check our <a href="#">Privacy Policy</a></small>
-                    </form>
-                </div>
+<!-- Book Table Section -->
+<section id="contact" class="bg-white">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6 d-none d-md-block">
+                <img src="assets/imgs/contact.jpg" alt="" class="w-100 rounded shadow">
             </div>
-        </div>
-    </section>
-    <!-- End OF Book Table Section -->
-
-    <!-- Prefooter Section  -->
-    <div class="py-4 border border-lighter border-bottom-0 border-left-0 border-right-0 bg-dark">
-        <div class="container">
-            <div class="row justify-content-between align-items-center text-center">
-                <div class="col-md-3 text-md-left mb-3 mb-md-0">
-                    <img src="img/logo.svg" width="100" alt="" class="mb-0">
-                </div>
-                <div class="col-md-9 text-md-right">
-                    <a href="#" class="px-3"><small class="font-weight-bold">Our Company</small></a>
-                    <a href="#" class="px-3"><small class="font-weight-bold">Our Location</small></a>
-                    <a href="#" class="px-3"><small class="font-weight-bold">Help Center</small></a>
-                </div>
+            <div class="col-md-6">
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" aria-label="Full name" placeholder="Your Name" :placeholder="$t('ask.name.placeholder')" :aria-label="$t('ask.name.label')">
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" class="form-control" name="phone" placeholder="Your Phone" aria-label="Phone number" :placeholder="$t('ask.phone.placeholder')" :aria-label="$t('ask.phone.label')">
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" class="form-control" id="" cols="30" rows="10" aria-label="Message" placeholder="Describe your demands there" :placeholder="$t('ask.content.placeholder')" :aria-label="$t('ask.content.label')"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block" x-text="$t('ask.button')">Confirm</button>
+                    <small class="form-text text-muted mt-3"><span x-text="$t('ask.policy.label')">We don't spam customers. Check our</span> <a href="#" x-text="$t('ask.policy.link_label')" data-link="/policy" :href="$el.dataset.link + '?lang=' + AlpineI18n.locale">Privacy Policy</a></small>
+                </form>
             </div>
         </div>
     </div>
-    <!-- End of PreFooter Section -->
+</section>
+<!-- End OF Book Table Section -->
 
-    <!-- Page Footer -->
-    <footer class="border border-dark border-left-0 border-right-0 border-bottom-0 p-4 bg-dark">
-        <div class="container">
-            <div class="row align-items-center text-center text-md-left">
-                <div class="col">
-                    <p class="mb-0 small">&copy; <script>document.write(new Date().getFullYear())</script>, <a href="https://swiss.ch" target="_blank">SWISS</a>  All rights reserved </p>
-                </div>
-                <div class="d-none d-md-block">
-                    <h6 class="small mb-0">
-                        <a href="javascript:void(0)" class="px-2"><i class="ti-facebook"></i></a>
-                        <a href="javascript:void(0)" class="px-2"><i class="ti-twitter"></i></a>
-                        <a href="javascript:void(0)" class="px-2"><i class="ti-instagram"></i></a>
-                        <a href="javascript:void(0)" class="px-2"><i class="ti-google"></i></a>
-                    </h6>
-                </div>
+<!-- Prefooter Section  -->
+<div class="py-4 border border-lighter border-bottom-0 border-left-0 border-right-0 bg-dark">
+    <div class="container">
+        <div class="row justify-content-between align-items-center text-center">
+            <div class="col-md-3 text-md-left mb-3 mb-md-0">
+                <img src="src/img/logo.svg" width="100" alt="" class="mb-0">
+            </div>
+            <div class="col-md-9 text-md-right">
+                <a href="#" class="px-3"><small class="font-weight-bold" x-text="$t('nav.menu.product_index')">Our planes</small></a>
+                <a href="#" class="px-3"><small class="font-weight-bold" x-text="$t('nav.menu.ask')">Ask information</small></a>
             </div>
         </div>
-        
-    </footer>
+    </div>
+</div>
+<!-- End of PreFooter Section -->
+
+<!-- Page Footer -->
+<footer class="border border-dark border-left-0 border-right-0 border-bottom-0 p-4 bg-dark">
+    <div class="container">
+        <div class="row align-items-center text-center text-md-left">
+            <div class="col">
+                <p class="mb-0 small">&copy; <script>document.write(new Date().getFullYear())</script>, <a href="https://swiss.ch" target="_blank">SWISS</a>  <span x-text="$t('footer.copyright')">All rights reserved</span></p>
+            </div>
+            <div class="d-none d-md-block">
+                <h6 class="small mb-0">
+                    <a href="javascript:void(0)" class="px-2"><i class="ti-facebook"></i></a>
+                    <a href="javascript:void(0)" class="px-2"><i class="ti-twitter"></i></a>
+                    <a href="javascript:void(0)" class="px-2"><i class="ti-instagram"></i></a>
+                    <a href="javascript:void(0)" class="px-2"><i class="ti-google"></i></a>
+                </h6>
+            </div>
+        </div>
+    </div>
+
+</footer>
 
 </body>
 </html>
