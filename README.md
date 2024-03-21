@@ -68,6 +68,7 @@ How to deploy the application outside the dev environment.
 ## Directory structure
 
 ```shell
+├───doc
 └───src
     ├───css
     │   ├───abstracts
@@ -80,6 +81,7 @@ How to deploy the application outside the dev environment.
     ├───login
     ├───public
     └───test
+        ├───authentication
         └───localization
 ```
 
