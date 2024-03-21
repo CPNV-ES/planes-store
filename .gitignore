@@ -2,3 +2,5 @@
 /node_modules
 /package-lock.json
 coverage/
+
+doc/PlaneStore_ClassDiagram.asta.lock
