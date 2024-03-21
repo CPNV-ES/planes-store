@@ -2,13 +2,16 @@ const {By, Builder, Select} = require('selenium-webdriver');
 
 const APP_URL = 'http://localhost:5173/'
 
+
+// TODO: Ajouter le given when then
+
 describe("When user change the language of the page", () => {
     /**
      * @type {WebDriver}
      */
     let driver;
 
-    beforeAll(async () => {
+    beforeEach(async () => {
         driver = await new Builder().forBrowser('chrome').build();
     })
 
@@ -64,6 +67,8 @@ describe("When user change the language of the page", () => {
         let input = await driver.findElement(By.id('exampleInputEmail1'));
 
         await input.sendKeys(inputContent)
+
+        // TODO: Ajouter le test que la traduction à bien fonctionner
 
         let languageSelector = new Select(await driver.findElement(By.id('language-selector')));
         await languageSelector.selectByValue('it')
