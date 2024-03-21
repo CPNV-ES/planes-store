@@ -1,4 +1,4 @@
-const Authentication = require("../Authentication");
+const Authentication = require("../../Authentication");
 
 describe("When Authentication is used with facebook connector", () => {
 	describe("When testing model formatted response", () => {
