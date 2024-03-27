@@ -18,6 +18,7 @@ describe("When user change the language of the page", () => {
 
     it('should translate the page to english', async () => {
         await driver.get(APP_URL);
+        await isNotTranslated(driver, 'The future of private aviation is already here')
 
         // When
         let languageSelector = new Select(await driver.findElement(By.id('language-selector')));
@@ -30,6 +31,7 @@ describe("When user change the language of the page", () => {
 
     it('should translate the page to french', async () => {
         await driver.get(APP_URL);
+        await isNotTranslated(driver, 'Le futur de l\'aviation privée est déjà là')
 
         // When
         let languageSelector = new Select(await driver.findElement(By.id('language-selector')));
@@ -42,6 +44,7 @@ describe("When user change the language of the page", () => {
 
     it('should translate the page to german', async () => {
         await driver.get(APP_URL);
+        await isNotTranslated(driver, 'Die Zukunft der Privatfliegerei ist bereits da')
 
         // When
         let languageSelector = new Select(await driver.findElement(By.id('language-selector')));
@@ -54,6 +57,7 @@ describe("When user change the language of the page", () => {
 
     it('should translate the page to italian', async () => {
         await driver.get(APP_URL);
+        await isNotTranslated(driver, 'Il futuro dell\'aviazione privata è già qui')
 
         // When
         let languageSelector = new Select(await driver.findElement(By.id('language-selector')));
@@ -74,8 +78,6 @@ describe("When user change the language of the page", () => {
         const inputContent = "Test input content"
         await input.sendKeys(inputContent)
 
-        // TODO: Ajouter le test que la traduction à bien fonctionner
-
         // When
         let languageSelector = new Select(await driver.findElement(By.id('language-selector')));
         await languageSelector.selectByValue('it')
@@ -93,4 +95,9 @@ describe("When user change the language of the page", () => {
 const haveLanguageSelector = async (driver) => {
     let languageSelector = await driver.findElement(By.id('language-selector'));
     expect(languageSelector).toBeDefined();
+}
+
+const isNotTranslated = async (driver, exceptedText) => {
+    let receivedText = await driver.findElement(By.css('h1.subtitle')).getText();
+    expect(receivedText).not.toBe(exceptedText)
 }
