@@ -109,21 +109,9 @@ The project uses [Jest][Jest-url] for testing.
 
 The project uses [Vite][Vite-url] as a development server.
 
-## Decisions made
+## Wiki
 
-### Why import dependencies using npm instead of self-hosting them ?
-
-To make it easier to manage the dependencies and to make the project more maintainable. By using npm, the dependencies are updated automatically and the project is more secure. The dependencies are also easier to install. The versioning is not getting dirty by some files that are not in the project itself. And the dependencies are only really loaded when the project is built.
-
-#### What have been done ?
-
-Remove the files from the templates files and update import to use npm package. It has needed to update some js and css file to point at right path.
-
-#### List of dependencies
-
-- [Bootstrap v4.3.1](https://www.npmjs.com/package/bootstrap/v/4.3.1) (to match template used version)
-- [jQuery v3.7.1](https://www.npmjs.com/package/jquery/v/3.7.1) (to match template used version)
-- [@greenmice/themify-icons v1.0.0](https://www.npmjs.com/package/@greenmice/themify-icons/v/1.0.0) (to match template used version)
+Our wiki can be found at [planes-store/wiki]([planes-store/wiki](https://github.com/CPNV-RIA1/planes-store/wiki))
 
 ## License
 
