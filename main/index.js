@@ -16,6 +16,8 @@ import './index.scss';
 
 import AlpineI18n from "alpinejs-i18n";
 import Alpine from "alpinejs";
+import TranslationStore from "../src/models/TranslationStore";
+import Dictionary from "../src/models/Dictionary";
 
 let locale = "en";
 
@@ -155,6 +157,16 @@ let messages = {
         }
     }
 };
+
+const store = new TranslationStore();
+
+(async function i() {
+    store.dictionary = await Dictionary.createFromStorage()
+})()
+
+
+
+console.log(store)
 
 document.addEventListener("alpine-i18n:ready", function () {
     // ... scroll to Usage to see where locale and messages came from
