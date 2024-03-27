@@ -12,7 +12,7 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-import '../index.scss';
+import './index.scss';
 
 import AlpineI18n from "alpinejs-i18n";
 import Alpine from "alpinejs";
@@ -57,13 +57,13 @@ let messages = {
             },
             button: "Envoyer",
             policy: {
-                label: "Nous n'envoyons pas de spam aux clients. Vérifiez notre",
+                label: "We don't send spam to customers. Check our",
                 link: "fr",
-                link_label: "Politique de confidentialité"
+                link_label: "Privacy policy"
             }
         },
         footer: {
-            copyright: "Tous droits réservés"
+            copyright: "All rights reserved"
         }
     },
     fr: {
@@ -78,6 +78,13 @@ let messages = {
         hero: {
             tagline: "Le futur de l'aviation privée est déjà là",
             cta: "Accéder au futur"
+        },
+        product_index: {
+            title: "Nos avions",
+            tagline: "À la une",
+        },
+        product: {
+            price: "Dès {value} CHF",
         },
         ask: {
             name: {
@@ -103,6 +110,50 @@ let messages = {
             copyright: "Tous droits réservés"
         }
     },
+    de: {
+        nav: {
+            contact: "Kontaktiere uns",
+            vat: "Alle Preise sind exkl. MwSt.",
+            menu: {
+                product_index: "Unsere Flugzeuge",
+                ask: "Fragen Sie nach Informationen"
+            }
+        },
+        hero: {
+            tagline: "Die Zukunft der Privatfliegerei ist bereits da",
+            cta: "Zugang zur Zukunft"
+        },
+        product_index: {
+            title: "Unsere Flugzeuge",
+            tagline: "Vorgestellt",
+        },
+        product: {
+            price: "Ab {value} CHF",
+        },
+        ask: {
+            name: {
+                placeholder: "Ihr Name",
+                label: "Vollständiger Name"
+            },
+            phone: {
+                placeholder: "Ihre Telefonnummer",
+                label: "Telefonnummer"
+            },
+            content: {
+                placeholder: "Ihre Anfrage",
+                label: "Nachricht"
+            },
+            button: "Senden",
+            policy: {
+                label: "Wir senden keine Spam-Nachrichten an Kunden. Überprüfen Sie unsere",
+                link: "de",
+                link_label: "Datenschutzrichtlinie"
+            }
+        },
+        footer: {
+            copyright: "Alle Rechte vorbehalten"
+        }
+    }
 };
 
 document.addEventListener("alpine-i18n:ready", function () {
