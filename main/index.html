@@ -44,10 +44,9 @@
             <ul class="navbar-nav ml-auto">
                 <li>
                     <select id="language-selector" @change="AlpineI18n.locale = $el.value">
-                        <option value="en">English</option>
-                        <option value="fr" selected>Français</option>
+                        <option value="en" selected>English</option>
+                        <option value="fr">Français</option>
                         <option value="de">Deutsch</option>
-                        <option value="it">Italiano</option>
                     </select>
                 </li>
                 <li class="nav-item">
@@ -62,9 +61,9 @@
 <header class="header">
     <div class="h-container">
         <img src="/src/img/logo.svg" alt="" class="logo">
-        <h1 class="subtitle">Le futur de l'aviation privée est déjà là</h1>
+        <h1 class="subtitle" x-text="$t('hero.tagline')">Le futur de l'aviation privée est déjà là</h1>
         <h1 class="title">SWISS AirCraft</h1>
-        <a class="btn btn-primary mt-3" href="#service">Accéder au catalogue</a>
+        <a class="btn btn-primary mt-3" href="#service" x-text="$t('hero.cta')">Accéder au catalogue</a>
     </div>
 </header>
 <!-- End Of Page Header -->
@@ -117,8 +116,8 @@
 <!-- Service Section -->
 <section id="service" class="pattern-style-4 has-overlay">
     <div class="container raise-2">
-        <h6 class="section-subtitle text-center">Avions à la une</h6>
-        <h3 class="section-title mb-6 pb-3 text-center">Nos avions</h3>
+        <h6 class="section-subtitle text-center" x-text="$t('product_index.tagline')">Avions à la une</h6>
+        <h3 class="section-title mb-6 pb-3 text-center" x-text="$t('product_index.title')">Nos avions</h3>
         <div class="row">
             <div class="col-md-6 mb-4" data-template="card.plane">
                 <a href="javascrip:void(0)" class="custom-list">
@@ -128,7 +127,7 @@
                     <div class="info">
                         <div class="head clearfix">
                             <h5 class="title float-left">Pilatus PC-24</h5>
-                            <p class="float-right text-primary">Dès 25'000'000 CHF</p>
+                            <p class="float-right text-primary" data-amount="4000" x-text="$t('product.price', {value: $el.getAttribute('data-amount')})">Dès 25'000'000 CHF</p>
                         </div>
                         <div class="body">
                             <p>The Super Versatile Jet</p>
