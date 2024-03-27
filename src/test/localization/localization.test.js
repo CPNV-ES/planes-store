@@ -13,7 +13,9 @@ describe("When user change the language of the page", () => {
 
     beforeEach(async () => {
         driver = await new Builder().forBrowser('chrome').build();
-        await haveLanguageSelector(driver);
+        setTimeout(async () => {
+            await haveLanguageSelector(driver);
+        }, 5000)
     })
 
     it('should translate the page to english', async () => {
@@ -21,7 +23,7 @@ describe("When user change the language of the page", () => {
         await isNotTranslated(driver, 'The future of private aviation is already here')
 
         // When
-        let languageSelector = new Select(await driver.findElement(By.id('language-selector')));
+        let languageSelector = new Select(await driver.findElement(By.css('#language-selector')));
         await languageSelector.selectByValue('en')
 
         // Then
