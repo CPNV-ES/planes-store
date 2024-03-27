@@ -13,6 +13,7 @@ describe("When user change the language of the page", () => {
 
     beforeEach(async () => {
         driver = await new Builder().forBrowser('chrome').build();
+        await haveLanguageSelector(driver);
     })
 
     it('should translate the page to english', async () => {
@@ -87,3 +88,9 @@ describe("When user change the language of the page", () => {
         await driver.quit();
     })
 })
+
+
+const haveLanguageSelector = async (driver) => {
+    let languageSelector = await driver.findElement(By.id('language-selector'));
+    expect(languageSelector).toBeDefined();
+}
