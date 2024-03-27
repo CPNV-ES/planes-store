@@ -1,4 +1,7 @@
 import './login.scss'
+import FBConnector from '../src/models/FBConnector'
+
+const connector = new FBConnector
 
 $(function() {
     'use strict';

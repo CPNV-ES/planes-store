@@ -1,4 +1,4 @@
-module.exports = class Connector {
+class Connector {
     constructor(){
         if (this.constructor === Connector) {
             throw new TypeError('Abstract class cannot be instantiated directly');
@@ -9,3 +9,5 @@ module.exports = class Connector {
     checkUserLoginStatus(){}
 
 }
+
+export default Connector
