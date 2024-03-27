@@ -2,43 +2,51 @@ import "https://connect.facebook.net/en_US/sdk.js";
 
 import Connector from "./Connector";
 
-class FBConnector extends Connector{
+class FBConnector extends Connector {
 	constructor() {
-        super()
+		super();
 		FB.init({
-			appId: "your_app_id",
+			appId: "959507645767483",
 			cookie: true,
 			xfbml: true,
 			version: "v19.0",
 		});
 
-		FB.getLoginStatus((response) => {
-			this.statusChangeCallback(response);
-		});
+		this.checkUserLoginStatus();
 	}
 	statusChangeCallback(response) {
 		if (response.status === "connected") {
-            FB.api("/me", function (response) {
-				console.log("Successful login for: " + response.name);
-				document.getElementById("status").innerHTML =
-					"Bonjour " + response.name + "!";
-			});
+            this.toggleVisibility("facebook-login-btn");
+            this.toggleVisibility("facebook-logout-btn");
+			document.getElementById("status").innerHTML = "Bienvenue!";
 		} else {
+            this.toggleVisibility("facebook-login-btn");
+			this.toggleVisibility("facebook-logout-btn");
 			document.getElementById("status").innerHTML =
 				"Veuillez vous connecter.";
 		}
 	}
-	checkLoginState() {
-		FB.getLoginStatus(function (response) {
-			statusChangeCallback(response);
+	checkUserLoginStatus() {
+		FB.getLoginStatus((response) => {
+			this.statusChangeCallback(response);
 		});
 	}
 	logout() {
-        FB.logout(() => {
-            this.checkLoginState()
-        })
+		FB.logout(() => {
+			this.checkUserLoginStatus();
+		});
+	}
+
+	login() {
+		FB.login((response) => {
+			this.statusChangeCallback(response);
+		});
+	}
+
+    toggleVisibility(elementId){
+        const element = document.getElementById(elementId);
+        element.className.match("d-none") ? element.classList.replace("d-none", "d-flex") : element.classList.replace("d-flex", "d-none");
     }
-	checkUserLoginStatus() {}
 }
 
 export default FBConnector;
