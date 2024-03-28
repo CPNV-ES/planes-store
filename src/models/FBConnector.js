@@ -14,7 +14,7 @@ export default class FBConnector extends Connector {
 
 		this.checkUserLoginStatus();
 	}
-	statusChangeCallback(response) {
+	#statusChangeCallback(response) {
 		if (response.status === "connected") {
             this.toggleVisibility("facebook-login-btn");
             this.toggleVisibility("facebook-logout-btn");
@@ -26,7 +26,7 @@ export default class FBConnector extends Connector {
 	}
 	checkUserLoginStatus() {
 		FB.getLoginStatus((response) => {
-			this.statusChangeCallback(response);
+			this.#statusChangeCallback(response);
 		});
 	}
 	logout() {
@@ -39,7 +39,7 @@ export default class FBConnector extends Connector {
 
 	login() {
 		FB.login((response) => {
-			this.statusChangeCallback(response);
+			this.#statusChangeCallback(response);
 		});
 	}
 
