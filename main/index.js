@@ -14,6 +14,13 @@
 
 import './index.scss';
 
+import Internationalization from "../src/models/Internationalization";
+
+let locale = "en";
+
+(new Internationalization()).initialize(locale);
+
+
 // smooth scroll
 $(document).ready(function(){
     $(".navbar .nav-link").on('click', function(event) {

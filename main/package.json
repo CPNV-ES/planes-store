@@ -13,6 +13,8 @@
 	"dependencies": {
 		"@greenmice/themify-icons": "^1.0.0",
 		"bootstrap": "4.3.1",
+		"alpinejs": "^3.13.7",
+		"alpinejs-i18n": "^2.4.2",
 		"jquery": "^3.7.1",
 		"vite": "^5.1.4"
 	},
