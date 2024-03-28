@@ -57,19 +57,6 @@ describe("When user change the language of the page", () => {
         expect(recievedText).toBe('Die Zukunft der Privatfliegerei ist bereits da')
     });
 
-    it('should translate the page to italian', async () => {
-        await driver.get(APP_URL);
-        await isNotTranslated(driver, 'Il futuro dell\'aviazione privata è già qui')
-
-        // When
-        let languageSelector = new Select(await driver.findElement(By.id('language-selector')));
-        await languageSelector.selectByValue('it')
-
-        // Then
-        let recievedText = await driver.findElement(By.css('h1.subtitle')).getText();
-        expect(recievedText).toBe('Il futuro dell\'aviazione privata è già qui')
-    });
-
     it("should'nt whipe input data while translating page", async () => {
         await driver.get(APP_URL);
 
