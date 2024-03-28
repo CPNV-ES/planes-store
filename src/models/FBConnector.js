@@ -16,8 +16,8 @@ export default class FBConnector extends Connector {
 	}
 	#statusChangeCallback(response) {
 		if (response.status === "connected") {
-            this.toggleVisibility("facebook-login-btn");
-            this.toggleVisibility("facebook-logout-btn");
+            this.#toggleVisibility("facebook-login-btn");
+            this.#toggleVisibility("facebook-logout-btn");
 			document.getElementById("status").innerHTML = "Bienvenue!";
 		} else {
 			document.getElementById("status").innerHTML =
@@ -32,8 +32,8 @@ export default class FBConnector extends Connector {
 	logout() {
 		FB.logout(() => {
 			this.checkUserLoginStatus();
-            this.toggleVisibility("facebook-login-btn");
-			this.toggleVisibility("facebook-logout-btn");
+            this.#toggleVisibility("facebook-login-btn");
+			this.#toggleVisibility("facebook-logout-btn");
 		});
 	}
 
@@ -43,7 +43,7 @@ export default class FBConnector extends Connector {
 		});
 	}
 
-    toggleVisibility(elementId){
+    #toggleVisibility(elementId){
         const element = document.getElementById(elementId);
         element.className.match("d-none") ? element.classList.replace("d-none", "d-flex") : element.classList.replace("d-flex", "d-none");
     }
