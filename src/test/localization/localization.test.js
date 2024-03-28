@@ -87,7 +87,7 @@ describe("When user change the language of the page", () => {
         expect(await input.getAttribute("value")).toBe(inputContent)
     });
 
-    afterAll(async () => {
+    afterEach(async () => {
         await driver.quit();
     })
 })
