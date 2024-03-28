@@ -101,6 +101,19 @@ The project uses [Conventional Commits][Commit-url]. The keywords used are: `fea
 
 The project uses [Gitflow][GitFlow-url]. The branches used are: `main`, `develop`, `feature`, `release`, `hotfix`. The branches are named with the following pattern: `type/short-description` eg.(feature/ux-reservation).
 
+#### file naming
+
+The project uses the following file naming convention.
+
+| Type | Naming convention | Example             |
+|------|-------------------|---------------------|
+| CSS  | kebab-case        | `main.css`          |
+| HTML | kebab-case        | `login-page.html`   |
+| JS   | camelCase         | `loginPage.js`      |
+| Class| PascalCase        | `LoginPage`         |
+| Tests | camelCase        | `loginPage.test.js` |
+| Translations | camelCase | `loginPage.en.js`   |
+
 ### Versioning
 
 The project uses [SemVer][SemVer-url]. The versioning is done with the following pattern: `major.minor.patch` eg.(1.0.0).
