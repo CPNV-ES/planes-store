@@ -79,20 +79,27 @@ There are no procedures to deploy the application on the integration environment
 
 ```shell
 ├───doc
+│   └───schemas
+├───login
+│   ├───img
+│   └───vendor
+│       └───icomoon
+│           └───fonts
+├───main
+│   ├───css
+│   │   ├───abstracts
+│   │   ├───base
+│   │   ├───components
+│   │   ├───custom
+│   │   └───layout
+│   └───img
 └───src
-    ├───css
-    │   ├───abstracts
-    │   ├───base
-    │   ├───components
-    │   ├───custom
-    │   └───layout
-    ├───home
-    ├───img
-    ├───login
-    ├───public
-    └───test
-        ├───authentication
-        └───localization
+    ├───exceptions
+    ├───models
+    ├───test
+    │   ├───authentication
+    │   └───localization
+    └───translations
 ```
 
 ## Collaborate
