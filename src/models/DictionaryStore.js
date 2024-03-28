@@ -23,7 +23,7 @@ export default class DictionaryStore {
     }
 
     /**
-     * @return {Dictionary}
+     * @return {Object}
      */
     #getDictionary = () => {
         return JSON.parse(window.localStorage.getItem('dictionary') ?? '{}');

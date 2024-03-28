@@ -1,4 +1,4 @@
-import TranslationStore from "./TranslationStore";
+import DictionaryStore from "./DictionaryStore";
 import AlpineI18n from "alpinejs-i18n";
 import Alpine from "alpinejs";
 
@@ -23,7 +23,7 @@ export default class Internationalization {
 
         this.locale = locale
         try {
-            this.#store = new TranslationStore('main');
+            this.#store = new DictionaryStore('main');
         } catch (e) {
             alert("Failed to load translations. Please try again later. \n Error details: " + e.message);
         }
