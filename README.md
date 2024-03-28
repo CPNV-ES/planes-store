@@ -26,6 +26,12 @@ This project is designed to sell planes and the main features are selling planes
   * [![Jest]][Jest-url]
 * Development server:
   * [![Vite]][Vite-url]
+* Frontend template:
+  * [![Pigga]][pigga-template-url]
+* Login:
+  * [![FacebookSDK]][FacebookSDK-url]
+* Traduction:
+  * [![I18n]][I18n-url]
 
 ### Prerequisites
 
@@ -167,3 +173,9 @@ This project is not licensed yet.
 [GitFlow-url]: https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow
 [SemVer-url]: https://semver.org/
 [Commit-url]: https://www.conventionalcommits.org/
+[Pigga]: https://img.shields.io/badge/Pigga%20template-20232A?style=for-the-badge&logo=Pigga&logoColor=Pigga
+[pigga-template-url]: https://www.free-css.com/free-css-templates/page277/pigga
+[FacebookSDK]: https://img.shields.io/badge/Facebook%20SDK-20232A?style=for-the-badge&logo=facebook&logoColor=facebook
+[FacebookSDK-url]: https://developers.facebook.com/docs/facebook-login/web
+[I18n]: https://img.shields.io/badge/I18next-20232A?style=for-the-badge&logo=i18n&logoColor=i18n
+[I18n-url]: https://www.i18next.com/
