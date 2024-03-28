@@ -1,4 +1,4 @@
-module.exports = class Authentication {
+export default class Authentication {
     #connector;
 	constructor(connector) {
         this.#connector = connector;
