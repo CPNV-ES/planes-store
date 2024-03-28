@@ -1,13 +1,16 @@
 const Authentication = require("../../models/Authentication");
+const FBConnector = require("../../models/FBConnector");
 
 describe("When Authentication is used with facebook connector", () => {
 	describe("When testing model formatted response", () => {
-		auth = new Authentication();
 		describe("When authentication authorize connection", () => {
+			let auth;
+			beforeEach(() => {
+				auth = new Authentication(new FBConnector());
+			});
 			it("should log in the user", () => {
 				// Given
 				// User is not logged in
-				const auth = new Authentication();
 
 				// When
 				// User clicks has clicked on the login button and has entered the correct credentials
@@ -20,7 +23,6 @@ describe("When Authentication is used with facebook connector", () => {
 			it("should log out the user which is logged in", () => {
 				// Given
 				// User is logged in
-				const auth = new Authentication();
 				auth.login();
 
 				// When
@@ -33,10 +35,13 @@ describe("When Authentication is used with facebook connector", () => {
 			});
 		});
 		describe("When authentication do not authorize connection", () => {
+			let auth;
+			beforeEach(() => {
+				auth = new Authentication(new FBConnector());
+			});
 			it("should not log in the user", () => {
 				// Given
 				// User is not logged in
-				const auth = new Authentication();
 
 				// When
 				// User has clicked on the login button and has entered the wrong credentials
@@ -48,12 +53,14 @@ describe("When Authentication is used with facebook connector", () => {
 		});
 	});
 	describe("When testing view formatted response", () => {
-		auth = new Authentication();
 		describe("When user clicks on the facebook login button", () => {
+			let auth;
+			beforeEach(() => {
+				auth = new Authentication(new FBConnector());
+			});
 			it("should log in the user if the credentials are correct", () => {
 				// Given
 				// User is not logged in
-				const auth = new Authentication();
 
 				// When
 				// User clicks has clicked on the login button and has entered the correct credentials
@@ -69,7 +76,6 @@ describe("When Authentication is used with facebook connector", () => {
 			it("should not log in the user if the credentials are wrong", () => {
 				// Given
 				// User is not logged in
-				const auth = new Authentication();
 
 				// When
 				// User clicks has clicked on the login button and has entered the wrong credentials
@@ -84,10 +90,13 @@ describe("When Authentication is used with facebook connector", () => {
 			});
 		});
 		describe("When user clicks on the facebook logout button", () => {
+			let auth;
+			beforeEach(() => {
+				auth = new Authentication(new FBConnector());
+			});
 			it("should log out the user", () => {
 				// Given
 				// User is logged in
-				const auth = new Authentication();
 				auth.login();
 
 				// When
