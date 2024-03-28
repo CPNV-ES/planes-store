@@ -5,9 +5,7 @@ export default class DictionaryStore {
 
     constructor(namespace) {
         if (!window.localStorage) throw new LocalStorageUnsupportedException();
-        if (this.dictionary.length === 0) {
-            this.dictionary = dictionary[namespace] ?? {}
-        }
+        this.dictionary = dictionary[namespace] ?? {}
     }
 
     #storeDictionary = (dictionary) => {
