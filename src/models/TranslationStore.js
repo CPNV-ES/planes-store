@@ -1,4 +1,5 @@
 import LocalStorageUnsupportedException from "../exceptions/LocalStorageUnsupportedException";
+import dictionary from '../translations/messages';
 
 export default class DictionaryStore {
 
@@ -14,7 +15,7 @@ export default class DictionaryStore {
     }
 
     get dictionary() {
-        return this.#getDictionary;
+        return this.#getDictionary();
     }
 
     set dictionary(dictionary) {
