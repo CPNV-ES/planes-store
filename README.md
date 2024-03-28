@@ -45,6 +45,10 @@ How do you set the sensitive data?
 
 ### On dev environment
 
+There are two folder to run the application. You can either run the login or the home page.
+
+Follow below steps in the `login` or `main` folder to run this page.
+
 #### Install the dependencies
 
 Using npm install the dependencies.
@@ -63,7 +67,7 @@ npm run dev
 
 ### On integration environment
 
-How to deploy the application outside the dev environment.
+There are no procedures to deploy the application on the integration environment.
 
 ## Directory structure
 
