@@ -17,11 +17,12 @@ $(function () {
 });
 const auth = new Authentication(new FBConnector());
 
-$("#login-button").on("click", (event) => {
+$("#facebook-login-btn").on("click", (event) => {
 	event.preventDefault();
-    auth.login();
+	auth.login();
 });
-$("#logout-button").on("click", (event) => {
+
+$("#facebook-logout-btn").on("click", (event) => {
 	event.preventDefault();
 	auth.logout();
 });
