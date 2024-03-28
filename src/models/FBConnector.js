@@ -1,6 +1,6 @@
-const Connector = require("./Connector");
+import Connector from './Connector';
 
-module.exports = class FBConnector extends Connector {
+export default class FBConnector extends Connector {
 	constructor() {
 		super();
 	}
