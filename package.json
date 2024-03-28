@@ -18,7 +18,9 @@
 		"bootstrap": "4.3.1",
 		"jquery": "^3.7.1",
 		"vite": "^5.1.4",
-		"i18next": "^23.10.0"
+		"i18next": "^23.10.0",
+		"alpinejs": "^3.13.7",
+		"alpinejs-i18n": "^2.4.2"
 	},
 	"devDependencies": {
 		"sass": "^1.71.1",
